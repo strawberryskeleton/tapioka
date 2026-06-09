@@ -28,6 +28,7 @@ class _MenuPageState extends State<MenuPage> {
         ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // promo banner
           Container(
@@ -69,10 +70,45 @@ class _MenuPageState extends State<MenuPage> {
           const SizedBox(height: 25),
 
           // search bar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: TextField(
+              decoration: InputDecoration(
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.white),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 25),
 
           // menu list
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+            child: Text(
+              "Food Menu", 
+              style: TextStyle(
+                fontWeight: FontWeight.bold, 
+                color: Colors.grey[800],
+                fontSize: 18,
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 10),
 
           // popular food
+          
+
+
+
+
         ],
       ),
 
