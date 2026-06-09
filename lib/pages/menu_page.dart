@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tapioka/components/button.dart';
 import 'package:tapioka/models/food.dart';
 import 'package:tapioka/theme/colors.dart';
+import '../components/food_tile.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -19,7 +20,7 @@ class _MenuPageState extends State<MenuPage> {
     Food(name: "3Q Milk Tea", price: "60.00", imagePath: "lib/images/3Q_milk_tea.png", rating: "4.9"),
 
     // peace ice tea
-    Food(name: "Peace Ice Tea", price: "50.00", imagePath: "lib/images/peace_ice_tea.png", rating: "4.2"),
+    Food(name: "Peace Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
 
   ];
 
@@ -117,10 +118,15 @@ class _MenuPageState extends State<MenuPage> {
 
           Expanded(
             child: ListView.builder(
-              itemBuilder: (context, index) => FoodTile(),
+              scrollDirection: Axis.horizontal,
+              itemCount: foodMenu.length,
+              itemBuilder: (context, index) => FoodTile(
+                food: foodMenu[index],
+              ),
             ),
           ),
 
+          const SizedBox(height: 25),
           // popular food
 
 
