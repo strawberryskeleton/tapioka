@@ -95,6 +95,7 @@ class _MenuPageState extends State<MenuPage> {
                   borderSide: BorderSide(color: Colors.white),
                   borderRadius: BorderRadius.circular(20),
                 ),
+                hintText: "Search from our menu...",
               ),
             ),
           ),
@@ -127,10 +128,60 @@ class _MenuPageState extends State<MenuPage> {
           ),
 
           const SizedBox(height: 25),
+
           // popular food
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[100],
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+            padding: const EdgeInsets.all(20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  children: [
+                    //image
+                    Image.asset(
+                      'lib/images/grass_jelly_milk_tea.png',
+                      height: 60,
+                    ),
+                    
+                    const SizedBox(width: 20),
+                    
+                    // name and price
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        //name
+                        Text(
+                          "Grass Jelly Milk Tea",
+                          style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                        ),
+                    
+                        const SizedBox(height: 10),
+                    
+                        //price
+                        Text(
+                          "\$21.00",
+                          style: TextStyle(color: Colors.grey[700]),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
 
+                // heart
+                const Icon(
+                  Icons.favorite_outline, 
+                  color: Colors.grey,
+                  size: 28,
+                ),
 
-
+              ],
+            ),
+          ),
 
 
         ],
