@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tapioka/components/button.dart';
+import 'package:tapioka/models/food.dart';
 import 'package:tapioka/theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -11,6 +12,17 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
+
+  // food menu
+  List foodMenu = [
+    // 3Q milk tea
+    Food(name: "3Q Milk Tea", price: "60.00", imagePath: "lib/images/3Q_milk_tea.png", rating: "4.9"),
+
+    // peace ice tea
+    Food(name: "Peace Ice Tea", price: "50.00", imagePath: "lib/images/peace_ice_tea.png", rating: "4.2"),
+
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +74,7 @@ class _MenuPageState extends State<MenuPage> {
                 ),
 
                 // image
-                Image.asset('lib/images/boba_slushie.png', height: 100,)
+                Image.asset('lib/images/cranberry_soda.png', height: 100,)
               ],
             ),
           ),
@@ -103,8 +115,14 @@ class _MenuPageState extends State<MenuPage> {
 
           const SizedBox(height: 10),
 
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) => FoodTile(),
+            ),
+          ),
+
           // popular food
-          
+
 
 
 
