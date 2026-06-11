@@ -4,6 +4,7 @@ import 'package:tapioka/components/button.dart';
 import 'package:tapioka/models/food.dart';
 import 'package:tapioka/theme/colors.dart';
 import '../components/food_tile.dart';
+import 'food_details_page.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -23,6 +24,11 @@ class _MenuPageState extends State<MenuPage> {
     Food(name: "Peace Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
 
   ];
+
+  // click menu --> food details page
+  void navigateToFoodDetails (int index) {
+    Navigator.push(context, MaterialPageRoute(builder:(context) => FoodDetailsPage(),));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -123,6 +129,7 @@ class _MenuPageState extends State<MenuPage> {
               itemCount: foodMenu.length,
               itemBuilder: (context, index) => FoodTile(
                 food: foodMenu[index],
+                onTap: () => navigateToFoodDetails(index),
               ),
             ),
           ),
