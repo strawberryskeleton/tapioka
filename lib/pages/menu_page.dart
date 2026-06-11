@@ -27,7 +27,14 @@ class _MenuPageState extends State<MenuPage> {
 
   // click menu --> food details page
   void navigateToFoodDetails (int index) {
-    Navigator.push(context, MaterialPageRoute(builder:(context) => FoodDetailsPage(),));
+    Navigator.push(
+      context, 
+      MaterialPageRoute(
+        builder: (context) => FoodDetailsPage(
+          food: foodMenu[index],
+        ),
+      ),
+    );
   }
 
   @override
