@@ -15,6 +15,24 @@ class FoodDetailsPage extends StatefulWidget {
 }
 
 class _FoodDetailsPageState extends State<FoodDetailsPage> {
+
+  // Quantity Count Functions
+  int quantityCount = 0;
+
+  void decrementQuantityCount () {
+    setState(() {
+      quantityCount--;
+    });
+  }
+
+  void incrementQuantityCount () {
+    setState(() {
+      quantityCount++;
+    });
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -86,7 +104,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   const SizedBox(height: 10),
 
                   Text(
-                    "Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms.",
+                    "Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms.",
                     style: TextStyle(
                       color: Colors.grey[600],
                       fontSize: 14,
@@ -108,6 +126,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
               children: [
                 // price + quantity
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // price
                     Text(
@@ -120,12 +139,60 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                     ),
 
                     // quantity
-                    
+                    Row(
+                      children: [
+                        // minus button
+                        Container(
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                            ),
+                            onPressed: decrementQuantityCount,
+                          ),
+                        ),
+
+                        // qty count
+                        SizedBox(
+                          width: 40,
+                          child: Center(
+                            child: Text(
+                              quantityCount.toString(),
+                              style: TextStyle(
+                                color: Colors.white,
+                                // fontWeight: FontWeight.bold,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        // plus button
+                        Container(
+                          decoration: BoxDecoration(
+                            color: secondaryColor,
+                            shape: BoxShape.circle,
+                          ),
+                          child: IconButton(
+                            icon: const Icon(
+                              Icons.add,
+                              color: Colors.white,
+                            ),
+                            onPressed: incrementQuantityCount,
+                          ),
+                        ),
+                      ],
+                    ),
 
                   ],
                 ),
 
                 // add to cart button
+                
 
               ],
             ),

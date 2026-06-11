@@ -21,7 +21,7 @@ class _MenuPageState extends State<MenuPage> {
     Food(name: "3Q Milk Tea", price: "60.00", imagePath: "lib/images/3Q_milk_tea.png", rating: "4.9"),
 
     // peace ice tea
-    Food(name: "Peace Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
+    Food(name: "Peach Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
 
   ];
 
