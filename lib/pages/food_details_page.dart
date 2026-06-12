@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'package:tapioka/components/button.dart';
+import 'package:tapioka/models/shop.dart';
 import 'package:tapioka/theme/colors.dart';
 import '../models/food.dart';
 
@@ -21,7 +24,9 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
 
   void decrementQuantityCount () {
     setState(() {
-      quantityCount--;
+      if (quantityCount > 0) {
+        quantityCount--;
+      }
     });
   }
 
@@ -29,6 +34,51 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     setState(() {
       quantityCount++;
     });
+  }
+
+  // ADD TO CART FUNCTION
+  void addToCart () {
+    // only add of qty > 0 ==> don't add if qty == 0
+    if (quantityCount > 0) {
+
+      // get access to shop
+      final shop = context.read<Shop>();
+
+      // add to cart
+      shop.addToCart(widget.food, quantityCount);
+
+      // display success message
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder: (context) => AlertDialog(
+          backgroundColor: primaryColor,
+          content: const Text(
+            "Successfully added to the cart!",
+            style: TextStyle(color: Colors.white),
+            textAlign: TextAlign.center,
+          ),
+          actions: [
+            // ok btn
+            IconButton(
+              onPressed: () {
+                // pop 1 --> remove dialog
+                Navigator.pop(context);
+
+                // pop 2 --> go to prev page
+                Navigator.pop(context);
+
+              }, 
+              icon: Icon(
+                Icons.done,
+                color: Colors.white,
+              ),
+            )
+          ],
+        ),
+      );
+
+    }
   }
 
 
@@ -130,7 +180,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   children: [
                     // price
                     Text(
-                      "\$" + widget.food.price,
+                      "\$${widget.food.price}",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,
@@ -191,7 +241,10 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   ],
                 ),
 
+                const SizedBox(height: 25),
+
                 // add to cart button
+                MyButton(text: "Add to Cart", onTap: addToCart),
                 
 
               ],

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'package:tapioka/components/button.dart';
-import 'package:tapioka/models/food.dart';
+// import 'package:tapioka/models/food.dart';
+import 'package:tapioka/models/shop.dart';
 import 'package:tapioka/theme/colors.dart';
 import '../components/food_tile.dart';
 import 'food_details_page.dart';
@@ -15,18 +17,23 @@ class MenuPage extends StatefulWidget {
 
 class _MenuPageState extends State<MenuPage> {
 
-  // food menu
-  List foodMenu = [
-    // 3Q milk tea
-    Food(name: "3Q Milk Tea", price: "60.00", imagePath: "lib/images/3Q_milk_tea.png", rating: "4.9"),
+  // // food menu
+  // List foodMenu = [
+  //   // 3Q milk tea
+  //   Food(name: "3Q Milk Tea", price: "60.00", imagePath: "lib/images/3Q_milk_tea.png", rating: "4.9"),
 
-    // peace ice tea
-    Food(name: "Peach Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
+  //   // peace ice tea
+  //   Food(name: "Peach Ice Tea", price: "50.00", imagePath: "lib/images/peach_ice_tea.png", rating: "4.2"),
 
-  ];
+  // ];
 
   // click menu --> food details page
   void navigateToFoodDetails (int index) {
+
+    // get items from shop model
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     Navigator.push(
       context, 
       MaterialPageRoute(
@@ -39,6 +46,10 @@ class _MenuPageState extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
+    // get items from shop model
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
+
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(

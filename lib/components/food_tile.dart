@@ -47,7 +47,7 @@ class FoodTile extends StatelessWidget {
       
                   // price
                   Text(
-                    '\$' + food.price,
+                    '\$${food.price}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.grey[700],
