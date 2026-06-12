@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tapioka/models/shop.dart';
+import 'models/shop.dart';
 import 'pages/intro_page.dart';
 import 'pages/menu_page.dart';
+import 'pages/cart_page.dart';
 
 void main() {
   runApp(
@@ -24,7 +25,8 @@ class MyApp extends StatelessWidget {
       home: const IntroPage(),
       routes: {
         '/intropage': (context) => const IntroPage(),
-        '/menupage':(context) => const MenuPage(),
+        '/menupage': (context) => const MenuPage(),
+        '/cartpage': (context) => const CartPage(),
       },
     );
   }

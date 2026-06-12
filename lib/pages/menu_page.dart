@@ -54,15 +54,25 @@ class _MenuPageState extends State<MenuPage> {
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey[800],
         elevation: 0,
         leading: Icon(
           Icons.menu,
-          color: Colors.grey[900],
+          // color: Colors.grey[900],
         ),
         title: Text(
           'Tokyo', 
-          style: TextStyle(color: Colors.grey[900]),
+          // style: TextStyle(color: Colors.grey[900]),
         ),
+        actions: [
+          // cart button
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/cartpage');
+            }, 
+            icon: Icon(Icons.shopping_cart)
+          ),
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
