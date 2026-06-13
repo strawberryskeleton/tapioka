@@ -68,8 +68,10 @@ class CartPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(25.0),
               child: MyButton(
-                text: "Pay Now", 
-                onTap: () {},
+                text: "Order Now", 
+                onTap: () {
+                  Navigator.pushNamed(context, '/orderpage');
+                },
               ),
             )
             
