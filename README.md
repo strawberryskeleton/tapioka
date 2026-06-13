@@ -19,7 +19,10 @@ P.S still looking for a good formatter for flutter. lmk if you know any good one
     - adding to cart produces a success message and takes back to main menu page instead of food deatils page
 - cart page:
     - delete items from cart
-    - pay now button (not working)
+    - order now button (takes to order page)
+- order page:
+    - order successful message displayed
+
 
 ## Screenshots
 
@@ -32,8 +35,14 @@ main menu page
 food details page
 ![food details page](./screenshots/food_details_page.png)
 
+add to cart success popup
+![addToCart success popup](./screenshots/addtocart_success_popup.png)
+
 cart page
 ![cart page](./screenshots/cart_page.png)
+
+order successful page
+![order page](./screenshots/order_page.png)
 
 
 ## Credits
