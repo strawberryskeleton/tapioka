@@ -152,7 +152,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   const SizedBox(height: 10),
 
                   Text(
-                    "Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms.",
+                    widget.food.description,
                     style: TextStyle(
                       color: Colors.grey[600],
                       fontSize: 14,

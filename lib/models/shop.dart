@@ -9,7 +9,8 @@ class Shop extends ChangeNotifier {
       name: "3Q Milk Tea",
       price: "60.00", 
       imagePath: "lib/images/3Q_milk_tea.png", 
-      rating: "4.9"
+      rating: "4.9",
+      description: "Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms.",
     ),
 
     // peach ice tea
@@ -17,7 +18,8 @@ class Shop extends ChangeNotifier {
       name: "Peach Ice Tea", 
       price: "50.00", 
       imagePath: "lib/images/peach_ice_tea.png", 
-      rating: "4.2"
+      rating: "4.2",
+      description: "Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms. Handpicked, farm-fresh tapioca balls flavourfully put in the tea made with dairy obtained from organic farms.",
     ),
 
     // ADD REST OF THE ITEMS
