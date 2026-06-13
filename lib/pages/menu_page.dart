@@ -200,7 +200,7 @@ class _MenuPageState extends State<MenuPage> {
                     
                         //price
                         Text(
-                          "\$21.00",
+                          "\$40.00",
                           style: TextStyle(color: Colors.grey[700]),
                         ),
                       ],
