@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tapioka/components/button.dart';
+import '../components/button.dart';
+import '../models/food.dart';
 import '../models/shop.dart';
 import '../theme/colors.dart';
-import '../models/food.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -27,6 +27,7 @@ class CartPage extends StatelessWidget {
           backgroundColor: primaryColor,
           foregroundColor: Colors.white,
         ),
+
         body: Column(
           children: [
             // CART ITEMS
@@ -58,6 +59,7 @@ class CartPage extends StatelessWidget {
                       ),
                     ),
                   );
+
                 },
               ),
             ),
@@ -70,6 +72,7 @@ class CartPage extends StatelessWidget {
                 onTap: () {},
               ),
             )
+            
           ],
         ),
       )

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:tapioka/components/button.dart';
+import 'package:google_fonts/google_fonts.dart';
 // import 'package:tapioka/models/food.dart';
-import 'package:tapioka/models/shop.dart';
-import 'package:tapioka/theme/colors.dart';
+import '../models/shop.dart';
+import '../components/button.dart';
 import '../components/food_tile.dart';
+import '../theme/colors.dart';
 import 'food_details_page.dart';
 
 class MenuPage extends StatefulWidget {
@@ -74,6 +74,7 @@ class _MenuPageState extends State<MenuPage> {
           ),
         ],
       ),
+      
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -12,13 +12,15 @@ class Shop extends ChangeNotifier {
       rating: "4.9"
     ),
 
-    // peace ice tea
+    // peach ice tea
     Food(
       name: "Peach Ice Tea", 
       price: "50.00", 
       imagePath: "lib/images/peach_ice_tea.png", 
       rating: "4.2"
     ),
+
+    // ADD REST OF THE ITEMS
   ];
 
   // customer cart

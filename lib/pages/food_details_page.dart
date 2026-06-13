@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:tapioka/components/button.dart';
-import 'package:tapioka/models/shop.dart';
-import 'package:tapioka/theme/colors.dart';
+import 'package:google_fonts/google_fonts.dart';
+import '../models/shop.dart';
 import '../models/food.dart';
+import '../components/button.dart';
+import '../theme/colors.dart';
 
 class FoodDetailsPage extends StatefulWidget {
   final Food food;
@@ -64,10 +64,8 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
               onPressed: () {
                 // pop 1 --> remove dialog
                 Navigator.pop(context);
-
                 // pop 2 --> go to prev page
                 Navigator.pop(context);
-
               }, 
               icon: Icon(
                 Icons.done,
@@ -161,7 +159,6 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                       height: 2,
                     ),
                   ),
-
 
                 ],
               ),
