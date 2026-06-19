@@ -26,6 +26,10 @@ P.S still looking for a good formatter for flutter. lmk if you know any good one
 ## DEMO VIDEO:
 
 
+https://github.com/user-attachments/assets/b8a9d25b-6483-480f-a144-17c5ea0a0a8f
+
+
+
 ## Screenshots
 
 intro page
