@@ -23,6 +23,8 @@ P.S still looking for a good formatter for flutter. lmk if you know any good one
 - order page:
     - order successful message displayed
 
+## DEMO VIDEO:
+
 
 ## Screenshots
 
@@ -50,4 +52,4 @@ order successful page
 - link to icon pack: ![bubble tea icon pack](https://www.flaticon.com/packs/bubble-tea-1?word=bubble%20tea)
 - Gemini AI: to help explain flutter concepts/code chunks found online
 - ChatGPT: generated item descriptions for food_details_page
-- Some random image of caffe menu on my sister's phone: giving menu item names to the downloaded icon pack images
+- Some random image of cafe menu on my sister's phone: giving menu item names to the downloaded icon pack images
