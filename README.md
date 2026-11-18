@@ -1,10 +1,12 @@
 # TAPIOKA
 
-Tapioka is a bubble tea shop app made in Flutter. This is my first app in flutter and took a lot time and effort since I had never coded in Flutter before. I made this app as a get-familiar-with-flutter project so that I can start building another big project which is (surprise surprise) an app made with Flutter called 'Stopify'.
+Tapioka is a bubble tea shop app made in Flutter. This is my first app in flutter and took a lot time and effort since I had never coded in Flutter/Dart before. I made this app as a get-familiar-with-flutter project so that I can start building another big project which is (surprise surprise) an app made with Flutter called 'Stopify'.
 
 I found flutter quite confusing at first. Took some time to get the hang of it. I can see now why people call it similar to working with html/css divs.
 
 P.S still looking for a good formatter for flutter. lmk if you know any good ones.
+
+> Note: this project is heavily based on a youtube tutorial. more details in Credits section.
 
 ## Features
 - intro page
@@ -47,13 +49,16 @@ add to cart success popup
 cart page
 ![cart page](./screenshots/cart_page.png)
 
-order successful page
+order successful page [made and implemented by myself]
 ![order page](./screenshots/order_page.png)
 
 
 ## Credits
 - made by me
-- link to icon pack: ![bubble tea icon pack](https://www.flaticon.com/packs/bubble-tea-1?word=bubble%20tea)
+- project based heavily on (used as a tutorial to learn flutter dev): [Mitch Koko - Youtube](https://youtu.be/zOQzu3BGSqo?si=ljsUHhivh3Ma7kxG)
+- link to icon pack: [bubble tea icon pack - flaticon](https://www.flaticon.com/packs/bubble-tea-1?word=bubble%20tea)
+
+> AI Usage:
 - Gemini AI: to help explain flutter concepts/code chunks found online
 - ChatGPT: generated item descriptions for food_details_page
 - Some random image of cafe menu on my sister's phone: giving menu item names to the downloaded icon pack images
