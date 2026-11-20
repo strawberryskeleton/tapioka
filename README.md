@@ -1,7 +1,7 @@
 # TAPIOKA
 
-Tapioka is a bubble tea shop app made in Flutter. This is my first app in flutter and took a lot time and effort since I had never coded in Flutter/Dart before. I made this app as a get-familiar-with-flutter project so that I can start building another big project which is (surprise surprise) an app made with Flutter called 'Stopify'.
-
+Tapioka is a bubble tea shop app made in Flutter. It's a simple app with a home screen, a menu page and a functional cart. 
+This is my first app in flutter and took a lot time and effort since I had never coded in Flutter/Dart before. I made this app as a get-familiar-with-flutter project so that I can start building another big project which is (surprise surprise) an app made with Flutter called 'Stopify'.
 I found flutter quite confusing at first. Took some time to get the hang of it. I can see now why people call it similar to working with html/css divs.
 
 P.S still looking for a good formatter for flutter. lmk if you know any good ones.
@@ -52,6 +52,18 @@ cart page
 order successful page [made and implemented by myself]
 ![order page](./screenshots/order_page.png)
 
+
+## Run Locally
+
+#### If you have flutter and xcode installed
+1. clone the repo
+2. open iOS emulator
+3. run `flutter run` from the root directory
+
+#### For android testing
+1. download the release on either an actual phone or an emulator
+2. install the app
+3. click on the app icon after installing
 
 ## Credits
 - made by me
